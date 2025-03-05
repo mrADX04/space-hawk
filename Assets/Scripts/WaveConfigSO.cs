@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO.Enumeration;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 //CreateAssetMenu is used here so that we can create new WaveConfig in Unity.*New Wave Config is the new file name & the menu name is of type 
@@ -13,9 +14,23 @@ using UnityEngine;
 // object is an asset that exists on disk. *).
 public class WaveConfigSO : ScriptableObject
 {
+    [SerializeField] List<GameObject> enemyPrefabs;
     //pathprefab of type transform is used to store all the Waypoints. *Note: the objects here are private as they are within an ScrirptableObject*
     [SerializeField] Transform pathprefab;
     [SerializeField] float movespeed = 5f;
+    [SerializeField] float timeBetweenEnemySpawns = 1f;
+    [SerializeField] float spawnTimeVariance = 0f;
+    [SerializeField] float minimumSpawnTime = 0.2f;
+
+    public int GetEnemyCount()
+    {
+        return enemyPrefabs.Count;
+    }
+
+    public GameObject GetEnemyPrefab(int index)
+    {
+        return enemyPrefabs[index];
+    }
 
     //GetMoveSpeed(), getStartingWaypoint() & GetWaypoints() are all 'Getter function' here as the objects within an ScriptableObject are private.
     //So in order to access movespeed we used a getter function.
@@ -32,5 +47,13 @@ public class WaveConfigSO : ScriptableObject
     }
     public float GetMoveSpeed(){
         return movespeed;
+    }
+
+    public float GetRandomSpawnTime()
+    {
+        float spawnTime = Random.Range(timeBetweenEnemySpawns - spawnTimeVariance,
+                                        timeBetweenEnemySpawns + spawnTimeVariance);
+        return Mathf.Clamp(spawnTime, minimumSpawnTime, float.MaxValue);
+
     }
 }
