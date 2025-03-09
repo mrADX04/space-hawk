@@ -34,7 +34,7 @@ public class EnemySpawner : MonoBehaviour
                     //less messy as this will instantiate all the new enemy clones into the EnemySpwaner object under the heirarchy.
                     Instantiate(currentWave.GetEnemyPrefab(i),
                                 currentWave.GetStartingWaypoint().position,
-                                Quaternion.identity,
+                                Quaternion.Euler(0,0,180),
                                 transform);
                     yield return new WaitForSeconds(currentWave.GetRandomSpawnTime());
                 }
