@@ -11,7 +11,7 @@ public class ScoreKeeper : MonoBehaviour
       return score;
     }
 
-    public void ModifyScore ( int value)
+    public void ModifyScore (int value)
     {
         score += value;
         Mathf.Clamp(score, 0, int.MaxValue);
