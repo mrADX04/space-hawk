@@ -12,7 +12,37 @@ public class AudioPlayer : MonoBehaviour
     [Header("Damage")]
     [SerializeField] AudioClip damageClip;
     [SerializeField] [Range(0f, 1f)] float damageVolume = 1f;
-    
+
+    //singleton pattern is used to use the same instance of the class
+    static AudioPlayer instance;
+
+    //making the instance global for using **Way 2 of executiong singleton pattern**
+    //but we will not be using this geetter method in our project
+    // public AudioPlayer GetInstance()
+    // {
+    //     return instance;
+    // }
+    void Awake()
+    {
+        ManageSingleton();
+    }
+
+    void ManageSingleton()
+    {
+        //**WAY 1 of executing singleton pattern (non-global way/method)**
+        // int instanceCount = FindObjectsOfType(GetType()).Length;
+        // if(instanceCount > 1)
+        if(instance != null)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     public void PlayShootingClip()
     {
