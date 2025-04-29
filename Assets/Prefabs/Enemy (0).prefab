@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2934280811545047478}
   - component: {fileID: 5601252763315105622}
   - component: {fileID: -201998383670119893}
+  - component: {fileID: 8864741233119332568}
   m_Layer: 7
   m_Name: Enemy (0)
   m_TagString: Untagged
@@ -125,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  health: 50
+  health: 20
   score: 50
   hitEffect: {fileID: 7010078597310223382, guid: 1abe890ff590f8a408c74d570511c645, type: 3}
   applyCameraShake: 0
@@ -162,6 +163,21 @@ MonoBehaviour:
   firingRateVariance: 0.5
   minimumFiringRate: 0.1
   isFiring: 0
+--- !u!114 &8864741233119332568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2170404478712490296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b5f5a8fa435494a8b27fba823b7453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 9056231500972445442, guid: 5397223772d985d40951f8364d0f08cb, type: 3}
+  lootlist:
+  - {fileID: 11400000, guid: e9dc47e56ed755841b55a864dab87ecd, type: 2}
 --- !u!1 &4778319033374655552
 GameObject:
   m_ObjectHideFlags: 0

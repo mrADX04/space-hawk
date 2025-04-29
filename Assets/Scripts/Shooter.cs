@@ -57,6 +57,9 @@ public class Shooter : MonoBehaviour
     {
         while (true)
         {
+            if(gameObject.CompareTag("Player"))
+            {//Debug.Log("is shooting");
+            }
             GameObject instance = Instantiate(projectilePrefab,
                                             transform.position,
                                             Quaternion.identity);

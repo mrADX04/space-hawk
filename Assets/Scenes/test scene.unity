@@ -1423,7 +1423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2099150555175273165, guid: 42e30f27432c6fb4d8b75c8f5febe339, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2099150555175273165, guid: 42e30f27432c6fb4d8b75c8f5febe339, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1477,6 +1477,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5773640414679951550, guid: 42e30f27432c6fb4d8b75c8f5febe339, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6511936718340758428, guid: 42e30f27432c6fb4d8b75c8f5febe339, type: 3}
       propertyPath: moveSpeed
       value: 7
@@ -1493,6 +1497,10 @@ PrefabInstance:
       propertyPath: rightshooter
       value: 
       objectReference: {fileID: 187466595}
+    - target: {fileID: 6539829069063950432, guid: 42e30f27432c6fb4d8b75c8f5febe339, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7487647033515636880, guid: 42e30f27432c6fb4d8b75c8f5febe339, type: 3}
       propertyPath: m_Sprite
       value: 

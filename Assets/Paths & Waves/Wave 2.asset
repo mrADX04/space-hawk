@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 2170404478712490296, guid: 6ca00f698fdd297449db575896551bd0, type: 3}
+  - {fileID: 2170404478712490296, guid: 6ca00f698fdd297449db575896551bd0, type: 3}
+  - {fileID: 2170404478712490296, guid: 6ca00f698fdd297449db575896551bd0, type: 3}
   pathprefab: {fileID: 6872813918904049981, guid: 32d99134a5d024a4a8a49d4480ffd587, type: 3}
-  movespeed: 1
+  movespeed: 10
   timeBetweenEnemySpawns: 1
   spawnTimeVariance: 0.5
   minimumSpawnTime: 0.2

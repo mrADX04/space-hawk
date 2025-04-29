@@ -6,6 +6,11 @@ public class ScoreKeeper : MonoBehaviour
 
     static ScoreKeeper instance;
 
+    public int GetScoreKeeper()
+    {
+        return score;
+    }
+
     //making the instance global for using **Way 2 of executiong singleton pattern**
     //but we will not be using this geetter method in our project
     // public ScoreKeeper GetInstance()
@@ -24,13 +29,11 @@ public class ScoreKeeper : MonoBehaviour
         // if(instanceCount > 1)
         if(instance != null)
         {
-            Debug.Log("creating new instance!");
             gameObject.SetActive(false);
             Destroy(gameObject);
         }
         else
         {
-            Debug.Log("using same instance");
             instance = this;
             DontDestroyOnLoad(gameObject);
         }

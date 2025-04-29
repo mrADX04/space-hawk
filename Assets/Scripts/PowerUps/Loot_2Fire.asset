@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f277e91695f2642b166721d24b71a2, type: 3}
+  m_Name: Loot_2Fire
+  m_EditorClassIdentifier: 
+  lootObject: {fileID: 9056231500972445442, guid: 179cef05fa35efa4fbcca163353aa061, type: 3}
+  lootName: Dual Shooter
+  dropChance: 100

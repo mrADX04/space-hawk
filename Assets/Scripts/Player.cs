@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,6 +8,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
     Vector2 rawInput;
+    bool isDualShooter = false; //for powerup buff "dualshooter"
     
     //padding is used here for the main camera viewport as if there is no padding our player sprite is getting clipped at the sides of the screen
     // as the clamping is done from the pivot point of the player.
@@ -19,6 +21,10 @@ public class Player : MonoBehaviour
     Vector2 maxBounds; 
 
     Shooter shooter;
+    ScoreKeeper score;
+
+    [SerializeField] Shooter leftshooter;
+    [SerializeField] Shooter rightshooter;
 
     void Awake()
     {
@@ -67,9 +73,21 @@ public class Player : MonoBehaviour
 
     void OnFire(InputValue value)
     {
-        if(shooter != null)
+        if(shooter != null && isDualShooter is false)
         {
+            Debug.Log("FIRING!!");
             shooter.isFiring = value.isPressed;
         }
+        if(shooter != null && isDualShooter is true)
+        {
+            leftshooter.isFiring = value.isPressed;
+            rightshooter.isFiring = value.isPressed;
+        }
+    
+    }
+
+    public void SetDualShooter(bool duoshooting)
+    {
+        isDualShooter = duoshooting;
     }
 }

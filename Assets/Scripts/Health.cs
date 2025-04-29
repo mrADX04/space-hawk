@@ -44,6 +44,12 @@ public class Health : MonoBehaviour
        return health;
     }
 
+// setter used in HealthBuff script
+    public void SetHealth (int amount)
+    {
+        health += amount;
+    }
+
 
     void TakeDamage(int damage)
     {
@@ -58,8 +64,9 @@ public class Health : MonoBehaviour
     {
         if(!isPlayer)
         {
-            //here score relates the integer called 'value' in the ScoreKeeper class, 
-            // we named it score in this class so it is easy to understand that we are talking about score
+            GetComponent<LootBag>().InstantiateLoot(transform.position);
+            //here score relates to the integer called 'value' in the ScoreKeeper class, 
+            // named it 'score' in this class so it is easy to understand that we are talking about score
             scoreKeeper.ModifyScore(score); 
             
         }
@@ -67,6 +74,7 @@ public class Health : MonoBehaviour
         {
             levelManager.LoadGameOver();
         }
+        //**Looting method placeholder**
         Destroy(gameObject);
     }
 

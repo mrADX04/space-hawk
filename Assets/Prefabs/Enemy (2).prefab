@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -201998383670119893}
   - component: {fileID: 3002573983482007859}
   - component: {fileID: 7218011321477715303}
+  - component: {fileID: -2740458795807984746}
   m_Layer: 7
   m_Name: Enemy (2)
   m_TagString: Untagged
@@ -127,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  health: 200
+  health: 100
   score: 500
   hitEffect: {fileID: 7010078597310223382, guid: 1abe890ff590f8a408c74d570511c645, type: 3}
   applyCameraShake: 0
@@ -237,6 +238,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-2740458795807984746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2170404478712490296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b5f5a8fa435494a8b27fba823b7453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 9056231500972445442, guid: 5397223772d985d40951f8364d0f08cb, type: 3}
+  lootlist: []
 --- !u!1 &4778319033374655552
 GameObject:
   m_ObjectHideFlags: 0
